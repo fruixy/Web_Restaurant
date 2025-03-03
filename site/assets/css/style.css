@@ -1,4 +1,64 @@
+body { 
+    padding-top: 20px; 
+}
+
 header h1 {
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
 }
+
+.card {
+    position: relative;
+    overflow: hidden;
+    height: 450px; 
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    height: 300px; 
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+    padding: 15px; 
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card:hover .card-body {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.card { 
+    margin-bottom: 20px; 
+}
+
+.container { 
+    max-width: 900px; 
+}
+
+h2, h3 { 
+    margin-top: 20px; 
+}
+
+
